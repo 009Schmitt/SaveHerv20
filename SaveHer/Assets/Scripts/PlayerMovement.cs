@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity,jumpHeight;
 
     public Transform groundCheck;
+    public Transform pistol;
     public float groundSize;
     public LayerMask groundMask;
     public int jumpQuantity;
@@ -53,10 +54,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetAxis("Horizontal") > 0.1f)
         {
+            pistol.position = new Vector3(.8f, 0, 0) + this.transform.position;
+            pistol.eulerAngles = new Vector3(0, 0, 90);
             velocityVector.x = velocity * Time.deltaTime * Input.GetAxis("Horizontal");
         }
         else if (Input.GetAxis("Horizontal") < -0.1f)
         {
+            pistol.position = new Vector3(-.8f, 0, 0) + this.transform.position;
+            pistol.eulerAngles = new Vector3(0, 180, 90);
             velocityVector.x = velocity * Time.deltaTime * Input.GetAxis("Horizontal");
         }
         else
