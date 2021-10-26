@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Flag : MonoBehaviour
+{
+    public LayerMask mask;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Physics.CheckBox(this.transform.position + new Vector3(0.3f,0,0),new Vector3(0.4f,1.5f,0.3f),new Quaternion(),mask))
+        {
+            print("Deu Certo");
+        }
+
+
+    }
+}

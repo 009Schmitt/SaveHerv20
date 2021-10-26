@@ -7,7 +7,8 @@ public class PlayerShoting : MonoBehaviour
     public GameObject projectile;
     public Transform spawn;
 
-    public float angle;
+    public float shotCooldown;
+    private float actualCooldown;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerShoting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && actualCooldown < Time.time)
         {
             if (spawn.rotation.y > 0)
             {
@@ -27,6 +28,7 @@ public class PlayerShoting : MonoBehaviour
             {
                 Instantiate(projectile, spawn.position, new Quaternion(0, 0, 1, 1));
             }
+            actualCooldown = Time.time + shotCooldown;
         }
 
     }

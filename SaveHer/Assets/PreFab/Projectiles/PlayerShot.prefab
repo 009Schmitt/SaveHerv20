@@ -221,5 +221,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask:
     serializedVersion: 2
-    m_Bits: 502
+    m_Bits: 1526
   bullet: {fileID: 330014541853478166}
