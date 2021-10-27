@@ -92,7 +92,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330014541853478166}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -202,7 +202,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330014543114240990}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -219,7 +219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84a163206f5c4595fff303dc0e4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maskEnemy:
+    serializedVersion: 2
+    m_Bits: 1024
   mask:
     serializedVersion: 2
-    m_Bits: 1526
+    m_Bits: 246
   bullet: {fileID: 330014541853478166}
+  pierce: 0

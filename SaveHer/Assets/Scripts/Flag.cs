@@ -11,9 +11,8 @@ public class Flag : MonoBehaviour
     {
         if(Physics.CheckBox(this.transform.position + new Vector3(0.3f,0,0),new Vector3(0.4f,1.5f,0.3f),new Quaternion(),mask))
         {
-            print("Deu Certo");
+            FindObjectOfType<_GameManager>().EndStage();    
         }
-
 
     }
 }
