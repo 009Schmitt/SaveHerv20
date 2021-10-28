@@ -56,6 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\_GameManager.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\NormalEnemyDie.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\PlatformMovement.cs" />
@@ -63,13 +66,13 @@
     <Compile Include="Assets\Scripts\Enemy\NormalEnemyMove.cs" />
     <Compile Include="Assets\Scripts\Flag.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShoting.cs" />
-    <Compile Include="Assets\Scripts\ProjectileMovement.cs" />
-    <Compile Include="Assets\Scripts\_GameManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\NormalEnemyAttack.cs" />
-    <Compile Include="Assets\Scripts\Enemy\NormalEnemyDie.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\ProjectileMovement.cs" />
+    <Compile Include="Assets\Scripts\Buttons\RestartButton.cs" />
     <Compile Include="Assets\Scripts\StageLoader.cs" />
-    <Compile Include="Assets\Scripts\RestartButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\StartButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\LoadButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\QuitButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Save.txt" />

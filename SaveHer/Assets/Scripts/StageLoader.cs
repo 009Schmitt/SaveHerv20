@@ -26,23 +26,27 @@ public class StageLoader : MonoBehaviour
 
         if (!File.Exists(path))
         {
-            File.WriteAllLines(path, new string[] { "Stage:0" });
+            File.WriteAllLines(path, new string[] { "Stage:2" });
         }
 
         string[] text = File.ReadAllLines(path);
 
         text = text[0].Split(':');
+        int stageValue = int.Parse(text[1]);
 
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        
+        SceneManager.LoadScene(stageValue);
 
-        if (text[1] == "0")
-        {
-            SceneManager.LoadScene(1);
-        }
-        else if (text[1] == "1")
-        {
-            //SceneManager.UnloadSceneAsync(0);
-            SceneManager.LoadScene(2);
-        }
+
+        //if (text[1] == "0")
+        //{
+        //    SceneManager.LoadScene(2);
+        //}
+        //else if (text[1] == "1")
+        //{
+        //    //SceneManager.UnloadSceneAsync(0);
+        //    SceneManager.LoadScene(3);
+        //}
     }
 }

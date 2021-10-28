@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class _GameManager : MonoBehaviour
 {
-    public GameObject playerObj,restartButton;
+    public GameObject playerObj, restartButton;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +29,14 @@ public class _GameManager : MonoBehaviour
         string path = Application.dataPath + "/Save.txt";
         string text = File.ReadAllText(path);
         int stage = int.Parse(text.Split(':')[1]);
+        //if (stage == 0)
+        //{
+        //    stage++;
+        //}
         stage++;
         File.WriteAllLines(path, new string[] { $"Stage:{stage}" });
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 
