@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(isGrounded && velocityVector.y < 0)
         {
-            velocityVector.y = -2f;
+            velocityVector.y = -1f;
             jumpCount = jumpQuantity;
         }
 
