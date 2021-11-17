@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maskEnemy:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 5120
   mask:
     serializedVersion: 2
     m_Bits: 246

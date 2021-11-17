@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerProjectile : MonoBehaviour
 {
-    public LayerMask maskEnemy,mask;
+    public LayerMask maskEnemy, mask;
     public GameObject bullet;
     public float pierce;
     // Start is called before the first frame update
@@ -22,6 +22,7 @@ public class PlayerProjectile : MonoBehaviour
         if (col.Length > 0)
         {
             NormalEnemyDie die;
+            FirstBossLife boss;
             if (col[0].TryGetComponent(out die))
             {
                 die.KillEnemy();
@@ -29,8 +30,12 @@ public class PlayerProjectile : MonoBehaviour
                 if (pierce == 0)
                 {
                     Destroy(bullet);
-
                 }
+            }
+            else if (col[0].TryGetComponent(out boss))
+            {
+                boss.Damage();
+                Destroy(bullet);
             }
         }
         else if (Physics.CheckSphere(this.transform.position, .11f, mask))

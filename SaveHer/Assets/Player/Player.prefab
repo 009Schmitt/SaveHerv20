@@ -235,7 +235,7 @@ MonoBehaviour:
   groundSize: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4160
   jumpQuantity: 1
   velocityVector: {x: 0, y: 0, z: 0}
   isGrounded: 0

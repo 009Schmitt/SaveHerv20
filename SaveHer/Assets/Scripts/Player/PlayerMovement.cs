@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     // gravity part
     public CharacterController controller;
-    
-    public float gravity,jumpHeight;
+
+    public float gravity, jumpHeight;
 
     public Transform groundCheck;
     public Transform pistol;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundSize, groundMask);
 
-        if(isGrounded && velocityVector.y < 0)
+        if (isGrounded && velocityVector.y < 0)
         {
             velocityVector.y = -1f;
             jumpCount = jumpQuantity;
